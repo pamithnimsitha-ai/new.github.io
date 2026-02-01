@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sudu Iri ❤️ | From Buruwa</title>
+    <meta name="description" content="A love letter from Pamith Nimsitha to Nadewmi Methnara">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           CSS VARIABLES & RESET
+           ========================================== */
+        :root {
+            --deep-blue: #1e3c72;
+            --royal-blue: #2a5298;
+            --light-pink: #ffdde1;
+            --hot-pink: #ff6b9d;
+            --coral: #feca57;
+            --white: #ffffff;
+            --glass-white: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* ==========================================
+           FLOATING HEARTS BACKGROUND
+           ========================================== */
+        .hearts-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -100px;
+            background: transparent;
+            animation: floatUp linear infinite;
+            opacity: 0;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            left: 10px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .heart:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-duration: 8s; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; width: 15px; height: 15px; animation-duration: 10s; animation-delay: 2s; background: rgba(255, 107, 157, 0.6); }
+        .heart:nth-child(3) { left: 30%; width: 25px; height: 25px; animation-duration: 12s; animation-delay: 4s; }
+        .heart:nth-child(4) { left: 40%; width: 18px; height: 18px; animation-duration: 9s; animation-delay: 1s; background: rgba(255, 255, 255, 0.4); }
+        .heart:nth-child(5) { left: 50%; width: 22px; height: 22px; animation-duration: 11s; animation-delay: 3s; }
+        .heart:nth-child(6) { left: 60%; width: 16px; height: 16px; animation-duration: 13s; animation-delay: 5s; background: rgba(255, 200, 200, 0.7); }
+        .heart:nth-child(7) { left: 70%; width: 24px; height: 24px; animation-duration: 7s; animation-delay: 2s; }
+        .heart:nth-child(8) { left: 80%; width: 19px; height: 19px; animation-duration: 14s; animation-delay: 4s; }
+        .heart:nth-child(9) { left: 90%; width: 21px; height: 21px; animation-duration: 10s; animation-delay: 6s; background: rgba(255, 150, 200, 0.5); }
+        .heart:nth-child(10) { left: 15%; width: 17px; height: 17px; animation-duration: 9s; animation-delay: 7s; }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* ==========================================
+           GLASSMORPHISM UTILITIES
+           ========================================== */
+        .glass-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* ==========================================
+           NAVIGATION
+           ========================================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #ffdde1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(255, 221, 225, 0.8)); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '❤️';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+            animation: heartbeat 1s infinite;
+        }
+
+        .nav-links a:hover {
+            color: #ffdde1;
+            text-shadow: 0 0 10px rgba(255, 221, 225, 0.8);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.3); }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            animation: titlePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); text-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
+            50% { transform: scale(1.02); text-shadow: 0 0 50px rgba(255, 107, 157, 0.8); }
+        }
+
+        .hero h1 .heart-beat {
+            display: inline-block;
+            animation: heartBeat 1.5s ease-in-out infinite;
+            color: #ff6b9d;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            10% { transform: scale(1.3); }
+            20% { transform: scale(1); }
+            30% { transform: scale(1.3); }
+            40% { transform: scale(1); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, #ff6b9d 0%, #feca57 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 107, 157, 0.6);
+        }
+
+        .hero-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Decorative circles */
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .deco-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .deco-circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            right: -50px;
+            animation-delay: 2s;
+            background: rgba(255, 107, 157, 0.2);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.6; }
+        }
+
+        /* ==========================================
+           SECTIONS COMMON
+           ========================================== */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #fff, #ff6b9d);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255, 107, 157, 0.8);
+        }
+
+        /* ==========================================
+           LOVE STORY SECTION
+           ========================================== */
+        .love-story {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .story-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem;
+            text-align: center;
+            transform-style: preserve-3d;
+            animation: floatingCard 6s ease-in-out infinite;
+        }
+
+        @keyframes floatingCard {
+            0%, 100% { transform: translateY(0) rotateX(0deg); }
+            50% { transform: translateY(-20px) rotateX(2deg); }
+        }
+
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.95);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .story-text::first-letter {
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            color: #ffdde1;
+            text-shadow: 0 0 20px rgba(255, 221, 225, 0.8);
+        }
+
+        /* ==========================================
+           MEMORY GALLERY
+           ========================================== */
+        .gallery {
+            perspective: 1000px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(30, 60, 114, 0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            color: white;
+        }
+
+        .gallery-item:hover .gallery-title {
+            transform: translateY(0);
+        }
+
+        .gallery-date {
+            color: #ffdde1;
+            font-size: 0.9rem;
+            transform: translateY(20px);
+            transition: transform 0.4s ease 0.1s;
+        }
+
+        .gallery-item:hover .gallery-date {
+            transform: translateY(0);
+        }
+
+        /* ==========================================
+           LOVE MESSAGE SECTION
+           ========================================== */
+        .love-message {
+            background: rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .message-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            position: relative;
+        }
+
+        .message-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            line-height: 2;
+            color: white;
+            font-style: italic;
+            position: relative;
+        }
+
+        .message-text::before,
+        .message-text::after {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: Georgia, serif;
+        }
+
+        .message-text::before {
+            top: -40px;
+            left: -20px;
+        }
+
+        .message-text::after {
+            bottom: -60px;
+            right: -20px;
+        }
+
+        .typing-text {
+            border-right: 3px solid #ff6b9d;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 4s steps(60) 1s forwards, blink 0.7s step-end infinite;
+            max-width: 0;
+        }
+
+        @keyframes typing {
+            to { max-width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .signature {
+            margin-top: 3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #ffdde1;
+            opacity: 0;
+            animation: fadeIn 2s ease 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* ==========================================
+           NICKNAME SECTION
+           ========================================== */
+        .nickname-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .names-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .name-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .name-card:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        .name-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .nickname {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #ffdde1 50%, #ff6b9d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientMove 3s ease infinite;
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .emoji {
+            display: block;
+            font-size: 3rem;
+            margin-top: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .connector {
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-connector {
+            font-size: 4rem;
+            color: #ff6b9d;
+            animation: heartBeat 1.2s infinite, glowHeart 2s infinite alternate;
+            filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8));
+        }
+
+        @keyframes glowHeart {
+            from { filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8)); }
+            to { filter: drop-shadow(0 0 40px rgba(255, 107, 157, 1)); }
+        }
+
+        .connector-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+            animation: linePulse 2s infinite;
+        }
+
+        @keyframes linePulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 1rem;
+            animation: glow 3s infinite alternate;
+        }
+
+        .footer-heart {
+            display: inline-block;
+            color: #ff6b9d;
+            animation: heartBeat 1s infinite;
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+           ========================================== */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: rgba(30, 60, 114, 0.98);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 2rem;
+                transition: right 0.4s ease;
+                backdrop-filter: blur(10px);
+            }
+
+            .menu-toggle:checked ~ .nav-links {
+                right: 0;
+            }
+
+            .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .names-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .connector {
+                transform: rotate(90deg);
+                height: 60px;
+            }
+
+            .story-card {
+                padding: 2rem;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+
+            .typing-text {
+                white-space: normal;
+                border: none;
+                animation: none;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .message-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e3c72;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ff6b9d;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffdde1;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: rgba(255, 107, 157, 0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Buruwa ❤️ Sudu Iri</div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#message">My Message</a></li>
+                <li><a href="#us">Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="deco-circle"></div>
+        <div class="deco-circle"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">💝 Valentine's Special 2026 💝</div>
+            <h1>
+                For My Sudu Iri <span class="heart-beat">❤️</span>
+            </h1>
+            <p class="hero-subtitle">From your Buruwa, with endless love</p>
+            <a href="#story" class="hero-btn">Explore Our Love ❤️</a>
+        </div>
+    </section>
+
+    <!-- Love Story Section -->
+    <section class="love-story" id="story">
+        <div class="container">
+            <h2 class="section-title">Our Love Story</h2>
+            
+            <div class="glass-card story-card">
+                <p class="story-text">
+                    From the moment I met you, Nadewmi, my world transformed into a canvas of infinite colors. 
+                    You are my Sudu Iri, the purest light in my life, illuminating every darkness with your smile. 
+                    As your Buruwa, I promise to cherish every moment, to be your strength and your comfort. 
+                    Our journey together is my greatest masterpiece, painted with laughter, tears, and countless 
+                    precious memories. You are not just my love; you are my inspiration, my peace, and my forever.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Gallery -->
+    <section class="gallery" id="memories">
+        <div class="container">
+            <h2 class="section-title">Our Precious Moments</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/667eea/ffffff?text=First+Date" alt="Memory 1">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">First Meeting</h3>
+                        <span class="gallery-date">The day everything changed</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/764ba2/ffffff?text=Adventures" alt="Memory 2">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Our Adventures</h3>
+                        <span class="gallery-date">Exploring the world together</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/f093fb/ffffff?text=Laughter" alt="Memory 3">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Endless Laughter</h3>
+                        <span class="gallery-date">Moments of pure joy</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/ff6b9d/ffffff?text=Dreams" alt="Memory 4">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Dreaming Together</h3>
+                        <span class="gallery-date">Building our future</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/feca57/ffffff?text=Comfort" alt="Memory 5">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Safe Haven</h3>
+                        <span class="gallery-date">In your arms is home</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-card">
+                    <img src="https://placehold.co/400x500/1e3c72/ffffff?text=Forever" alt="Memory 6">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Forever & Always</h3>
+                        <span class="gallery-date">Until the end of time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Message Section -->
+    <section class="love-message" id="message">
+        <div class="container">
+            <h2 class="section-title">My Heart Speaks</h2>
+            
+            <div class="glass-card message-container">
+                <p class="message-text">
+                    <span class="typing-text">My dearest Sudu Iri, every beat of my heart whispers your name. You are the poetry I never knew how to write, the melody that plays endlessly in my soul. In your eyes, I found my home; in your heart, I found my peace. I love you beyond words, beyond time, beyond measure. You are my today, my tomorrow, and all of my forevers. Happy Valentine's Day, my love.</span>
+                </p>
+                <div class="signature">
+                    Forever Yours,<br>
+                    <span style="color: #ffdde1; font-size: 2rem;">Buruwa 💕</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nickname Section -->
+    <section class="nickname-section" id="us">
+        <div class="container">
+            <div class="names-container">
+                <div class="name-card glass-card">
+                    <div class="name-label">The Light of My Life</div>
+                    <div class="nickname">Sudu Iri</div>
+                    <span class="emoji">💕</span>
+                </div>
+
+                <div class="connector">
+                    <div class="connector-line"></div>
+                    <div class="heart-connector">❤️</div>
+                </div>
+
+                <div class="name-card glass-card">
+                    <div class="name-label">Her Protector</div>
+                    <div class="nickname">Buruwa</div>
+                    <span class="emoji" style="animation-delay: 0.5s;">🐻</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">
+                Made with <span class="footer-heart">❤️</span> by Pamith Nimsitha for Nadewmi Methnara
+            </p>
+            <p style="opacity: 0.8; font-size: 0.9rem;">© 2026 | Forever & Always</p>
+        </div>
+    </footer>
+
+</body>
+</html>
